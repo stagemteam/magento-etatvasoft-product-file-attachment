@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Etatva_Core>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Etatva_Core>
+    </modules>
+</config>

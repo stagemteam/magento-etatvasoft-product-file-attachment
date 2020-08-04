@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Etatva_Core>
+            <version>0.1.0</version>
+        </Etatva_Core>
+    </modules>
+    
+    <global>
+        <helpers>
+            <etatva_core>
+                <class>Etatva_Core_Helper</class>
+            </etatva_core>
+        </helpers>
+    </global>
+    
+</config>

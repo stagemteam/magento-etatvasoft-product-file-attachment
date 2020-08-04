@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <tabs>
+        <etatva translate="label" module="core">
+            <label>Etatvasoft Configuration</label>
+            <sort_order>12</sort_order>
+        </etatva>
+    </tabs>
+</config>

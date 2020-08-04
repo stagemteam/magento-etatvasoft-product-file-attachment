@@ -1,0 +1,68 @@
+<?php
+	$login = Mage::getSingleton('customer/session')->isLoggedIn();
+	
+	$user_register = Mage::getStoreConfig('files/files/registerdownload');
+	
+	
+	if(Mage::getStoreConfig('files/files/allowdownload'))
+	{
+		if($user_register == 1 || ($user_register == 0 && !empty($login)))
+		{
+			$productId=$this->getProduct()->getId();
+			$collection=Mage::getModel('files/files')->getFileCollection($productId);
+		    $fileCollection=$collection->getData();
+			$showImageFlag=0;
+			$divHeigth=25;
+			$imageBaseDir=Mage::getBaseDir('media').DS.'file_type_icons';
+			$imageBaseUrl=Mage::getBaseUrl('media').'file_type_icons';
+			$maxLinks=Mage::getStoreConfig('files/files/frontendlinks') ? Mage::getStoreConfig('files/files/frontendlinks') : 1;
+			if(Mage::getStoreConfig('files/files/showimage'))
+			{
+	        	$showImageFlag=1;
+				$imageHeight= Mage::getStoreConfig('files/files/typeimageheight') ? Mage::getStoreConfig('files/files/typeimageheight') : 25;
+				$imageWidth= Mage::getStoreConfig('files/files/typeimagewidth') ? Mage::getStoreConfig('files/files/typeimagewidth') : 25;
+				$divHeigth=$imageHeight;
+	        }
+			if(count($fileCollection)>0)
+			{
+	?>
+			<b>Download Attachment</b>
+			<div class='mainDiv'>
+	        	<table>
+				<?php
+					$linksCount=1;
+					foreach($fileCollection as $currentFile)
+					{
+						$imageDirPath=$imageBaseDir.DS.$currentFile['file_type'].'.png';
+
+	                    $imageName=$currentFile['file_type'];
+						if(!file_exists($imageDirPath))
+	                    	$imageName=Mage::getStoreConfig('files/files/defaultimage') ? Mage::getStoreConfig('files/files/defaultimage') : 'default';
+
+						$path=Mage::getUrl('files/index/download'.'/id/'.$currentFile['file_timestamp']);
+						$imagePath=$imageBaseUrl."/".$imageName.'.png';
+						$size=$this->getModifiedFileSize($currentFile['file_size']);
+
+						echo "<tr>";
+							if($showImageFlag)
+								echo "<td class='fileImageDiv' style='height:".$divHeigth.";'><img src='".$imagePath."' height='".$imageHeight."' width='".$imageWidth."' alt='".$currentFile['file_type']."' /></td>";
+							echo "<td class='fileTitleDiv' style='height:".$divHeigth.";'><b>".$currentFile['file_title']."</b>";
+							echo "<font>(".$size;
+	                        if(!$showImageFlag)
+								echo " - ".$currentFile['file_type'];
+							echo ")</font></td>";
+							echo "<td style='height:".$divHeigth.";'><a href='".$path."'/>Download</a></td>";
+		                echo "</tr>";
+						if($linksCount < $maxLinks)
+							$linksCount++;
+						else
+							break;
+					}
+				?>
+				</table>
+			</div>
+	<?php
+			}
+		}
+	}
+?>

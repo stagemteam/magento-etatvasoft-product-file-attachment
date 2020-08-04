@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<package>
+    <name>Etatvasoft_Product_File_Attachment</name>
+    <version>1.2.1</version>
+    <stability>stable</stability>
+    <license>Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Attach additional download files, manuals, media files, audio files with products for customer download. </summary>
+    <description>&lt;p&gt; Easily attach additional downloadable files of any extension to your Magento products. This module helps to customers for download files, manuals, media files, audio files and other.   &lt;br /&gt;&lt;br /&gt;&#xD;
+Using this extension admin can attach various types of files to store, so customers can download that files. This extension adds separate tab into the product add/edit page so admin can attach any product specific files. &lt;br /&gt;&#xD;
+Admin can set the title &amp; order of display for the each attachment like File sort-order(default), download count, file size &lt;br /&gt;&lt;br /&gt;&#xD;
+Admin can make the settings for allowing guest download or not &lt;br /&gt;&lt;br /&gt;&#xD;
+In product detail page it shows file attachment icon, title and size of the file attachment to your Customers.&lt;br /&gt;&lt;br /&gt;&#xD;
+By default we have allow 3gp, avi, bmp, doc, docx, flv, gif, jpeg, jpg, mp3, mp4, odf, odt, pdf, png, ppt, pptx, psd, rar, sql, swf, tiff, txt, xls, xlsx, zip extension files.&lt;br /&gt;&#xD;
+Customer can add new file type icon by uploading the file attachment icons at media &gt;&gt; file_type_icons and define file type in backend system &gt;&gt; configuration &gt;&gt; Product File Upload/Download Settings &gt;&gt; Settings &gt;&gt; Allowed File Types &lt;br /&gt;&lt;br /&gt;&#xD;
+&lt;span&gt;&lt;strong&gt;Key Features:-&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt; Ability to enable/disable download from admin configuration &lt;/li&gt;&#xD;
+&lt;li&gt; Ability to define allowed file types for attachment in admin configuration. &lt;/li&gt;&#xD;
+&lt;li&gt; Ability to add new file type icon by uploading the file attachment icons at media &gt;&gt; file_type_icons and define file type in backend system &gt;&gt; configuration &gt;&gt; Product File Upload/Download Settings &gt;&gt; Settings &gt;&gt; Allowed File Types&lt;/li&gt;&#xD;
+&lt;li&gt; Ability to define the maximum file size for attachment &lt;/li&gt;&#xD;
+&lt;li&gt; Ability to define the sort by option in admin configuration for front display like File sort-order(default), download count, file size &lt;/li&gt;&#xD;
+&lt;li&gt; Ability to enable/disable display file type Image &lt;/li&gt;&#xD;
+&lt;li&gt; Ability to enable/disable guest download from admin configuration&lt;/li&gt;&#xD;
+&lt;li&gt; Ability to define thumb size for the attachment (3gp, avi, bmp, doc, docx, flv, gif, jpeg, jpg, mp3, mp4, odf, odt, pdf, png, ppt, pptx, psd, rar, sql, swf, tiff, txt, xls, xlsx, zip) &lt;/li&gt;&#xD;
+&lt;li&gt; Add default file attachment icons for dispaly &lt;/li&gt;&#xD;
+&lt;li&gt; Easy admin interface for upload attachment in product add/edit page &lt;/li&gt;&#xD;
+&lt;li&gt; Ability to define file title for display in frontend &lt;/li&gt;&#xD;
+&lt;li&gt; Ability to add new file type icon by uploading the file attachment icons at media &gt;&gt; file_type_icons and define file type in backend system &gt;&gt; configuration &gt;&gt; Product File Upload/Download Settings &gt;&gt; Settings &gt;&gt; Allowed File Types &lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&lt;span&gt;&lt;strong&gt;Steps to configure the module:-&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Go to admin pannel.&lt;/li&gt;&#xD;
+&lt;li&gt; Go To system &gt;&gt; Configuration &gt;&gt; Tatvasoft &gt;&gt; Product File Upload/Download Settings  &gt;&gt; Settings &lt;/li&gt;&#xD;
+&lt;li&gt; Allow Product File Uploads = Yes for enable the module and download&lt;/li&gt;&#xD;
+&lt;li&gt; Change all other settings according to your needs&lt;/li&gt;&#xD;
+&lt;li&gt; &lt;strong&gt;echo $this-&gt;getLayout()-&gt;createBlock('files/product_view')-&gt;setTemplate('files/files.phtml')-&gt;toHtml();&lt;/strong&gt;&lt;br /&gt;Place it in product details page(view.phtml) of your theme&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;span&gt;&lt;strong&gt; Key Solution if you feel any of the above functionality is not working :-&lt;/strong&gt;&lt;/span&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt; Copy Product Files Attachment template and layout folder &amp; files from default/default theme to your custom theme&lt;/li&gt;&lt;li&gt; click on system &gt;&gt; permissions &gt;&gt; rolls &gt;&gt; administrators &gt;&gt; Access to all sources &gt;&gt; Save &gt;&gt;Logout &gt;&gt; Login &lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+</description>
+    <notes>Compatible with all latest 1.9.x version</notes>
+    <authors><author><name>Etatvasoft</name><user>admin</user><email>sagar.shah@tatvasoft.com</email></author></authors>
+    <date>2017-07-13</date>
+    <time>09:07:05</time>
+    <contents><target name="magelocal"><dir name="Etatva"><dir name="Core"><dir name="Helper"><file name="Data.php" hash="05cd19a262981460c9e9a718da609a50"/></dir><dir name="etc"><file name="adminhtml.xml" hash="78ced7978d012c452b363b2a9cb72515"/><file name="config.xml" hash="d7e1026a5b06672f7b41aece4d6e326f"/><file name="system.xml" hash="0eb10946ef648408231b588ccbab2b4b"/></dir></dir><dir name="Files"><dir name="Block"><dir name="Catalog"><dir name="Product"><dir name="Edit"><dir name="Tab"><file name="File.php" hash="a3be9203fec8be982af4b946d759d0a0"/><file name="Sample.php" hash="b6a4efd943f240cba8132cedae833100"/></dir><file name="Tabs.php" hash="d9db79d91dbb9e6214ed3ef7d849079b"/></dir></dir></dir><dir name="Product"><file name="View.php" hash="a808c95731bfd23661dbae5652ffd0a1"/></dir></dir><dir name="Helper"><file name="Data.php" hash="21f96f73a69af9c94f7f23f115b47171"/></dir><dir name="Model"><file name="Files.php" hash="4d13e175c1f7671cc5e7dbaa0a177ddf"/><dir name="Mysql4"><dir name="Files"><file name="Collection.php" hash="21e7ec8c983fdb0125ad3d81953338a5"/></dir><file name="Files.php" hash="1b63658d70dc9beea8591497eae86583"/></dir><dir name="System"><dir name="Config"><dir name="Source"><dir name="Dropdown"><file name="Values.php" hash="dbf05e540148bb52b89d1fec116323c4"/></dir></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Downloadable"><file name="FileController.php" hash="64367e5d5331658e5a63d1296d5aabce"/></dir></dir><dir name="Catalog"><file name="ProductController.php" hash="ec0208bae67039337cb75a48d56c2194"/></dir><file name="IndexController.php" hash="8ab249a0828bcc1b96cd9ed0ffb0c690"/></dir><dir name="etc"><file name="adminhtml.xml" hash="c915c632d94f084566a1d85f58248ea2"/><file name="config.xml" hash="f2bc49adecf9851518c3a80f3ba2ad80"/><file name="system.xml" hash="02d35ac0dd5d0dc38293d5272a24f118"/></dir><dir name="sql"><dir name="files_setup"><file name="mysql4-install-0.1.0.php" hash="f9b4005ce3f85e4d84b5b3d24045a209"/><file name="mysql4-upgrade-0.1.0-0.1.1.php" hash="93e4a761384ab6f38fb173b8ddc8fdee"/><file name="mysql4-upgrade-0.1.1-0.1.2.php" hash="bdab5d062d12e270e7f9f1adc08be37d"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><dir name="files"><file name="files.xml" hash="c78dfb87c2bc0bdc4000dbe149054395"/></dir></dir><dir name="template"><dir name="files"><file name="files.phtml" hash="b2e71dac14f710d4132c5ac3c00c0191"/></dir></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="catalog"><dir name="product"><dir name="edit"><file name="files.phtml" hash="9f1ecc9e2ecaeaf1771301f67d2bfc9f"/><dir name="files"><file name="sample.phtml" hash="a262bd28b60b976ce04e0879b13720a0"/></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Etatva_Files.xml" hash="c77c601bce63347f82589a79502e6620"/><file name="Etatva_Core.xml" hash="5c26cee09a7b85bf4c95d7f7c66a190c"/></dir></target><target name="magemedia"><dir name="file_type_icons"><file name="3gp.png" hash="1112e178f2bcc7d192fd978240fbab27"/><file name="Thumbs.db" hash="c369312392d6980b42778970ab0e23b2"/><file name="avi.png" hash="8a81be5118b9df50015b8a3fd203fc4f"/><file name="bmp.png" hash="d2bf552a756d7906d50e680e57ebff51"/><file name="default.png" hash="c362d1f34ea703c0fc073eb71da3190c"/><file name="doc.png" hash="12d4d74806a1cfc843e5dec6f2cacb78"/><file name="docx.png" hash="d8410c4b56dc05dd4142667ed8ec8400"/><file name="flv.png" hash="c6a5a03169823820541068ab369c1aaa"/><file name="gif.png" hash="3e57033094ef310ea58112d2eb9211d6"/><file name="jpeg.png" hash="5646db29e5073e3f3cf24d0d80210bcc"/><file name="jpg.png" hash="5646db29e5073e3f3cf24d0d80210bcc"/><file name="mp3.png" hash="65522b600db026d86a94c67f24674f7e"/><file name="mp4.png" hash="ef8ab955212abea1437805e06027db5f"/><file name="odf.png" hash="3516e9c591e7ab5cc657d3714d92ac60"/><file name="odt.png" hash="27d3f92692ecb30538da020872645e95"/><file name="pdf.png" hash="d179747e0f6783ef80a1bc66f43f5cc1"/><file name="png.png" hash="e66b1d2284d487ba2631e91f29ecec6f"/><file name="ppt.png" hash="d24652ba9d994f7fadf930ee8449a043"/><file name="pptx.png" hash="d24652ba9d994f7fadf930ee8449a043"/><file name="psd.png" hash="67267451b0130722c352012b1f07b0ac"/><file name="rar.png" hash="b09f8ea3b9055a5771bf72b9bc73120f"/><file name="sql.png" hash="bbde922a4ecfe09331b6208826c2bcd7"/><file name="swf.png" hash="c6a5a03169823820541068ab369c1aaa"/><file name="tiff.png" hash="6d5e8ef866ed26a9c05f8c5f6b4f1241"/><file name="txt.png" hash="102b4cd5210f61bf3690a29590bfe082"/><file name="xls.png" hash="2da497f1731dd206bc3293a17f3d4ced"/><file name="xlsx.png" hash="2da497f1731dd206bc3293a17f3d4ced"/><file name="zip.png" hash="97ecf06e8de7842aa4dc486922673933"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.4.16</min><max>5.6.31</max></php></required></dependencies>
+</package>
