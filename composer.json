@@ -1,0 +1,23 @@
+{
+  "name": "stagem/magento-etatvasoft-product-file-attachment",
+  "type": "magento-module",
+  "license":"MIT Licence",
+  "description":"Attach files to your products in Magento easily",
+  "authors":[{
+    "name":"Serhii Popov",
+    "email":"popow.serhii@gmail.com"
+  }],
+  "extra": {
+    "map": [
+      ["app/etc/modules/Etatva_Core.xml", "app/etc/modules/Etatva_Core.xml"],
+      ["app/etc/modules/Etatva_Files.xml", "app/etc/modules/Etatva_Files.xml"],
+      ["app/code/local/Etatva/Core/", "app/code/local/Etatva/Core/"],
+      ["app/code/local/Etatva/Files/", "app/code/local/Etatva/Files/"],
+      ["app/design/adminhtml/default/default/template/catalog/product/edit/files.phtml", "app/design/adminhtml/default/default/template/catalog/product/edit/files.phtml"],
+      ["app/design/adminhtml/default/default/template/catalog/product/edit/files/sample.phtml", "app/design/adminhtml/default/default/template/catalog/product/edit/files/sample.phtml"],
+      ["app/design/frontend/default/default/layout/files/files.xml", "app/design/frontend/default/default/layout/files/files.xml"],
+      ["app/design/frontend/default/default/template/files/files.phtml", "app/design/frontend/default/default/template/files/files.phtml"],
+      ["media/file_type_icons/", "media/file_type_icons/"]
+    ]
+  }
+}
