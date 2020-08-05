@@ -28,7 +28,7 @@ class Etatva_Files_IndexController extends Mage_Core_Controller_Front_Action
 	}
 	protected function _processDownload($sample,$resource, $resourceType)
     {
-         $contentDisposition='attachment';
+        $contentDisposition='inline';
         $fileName=$sample->getProdFile();
         $charPosition= strrpos($fileName, "/");
 		$fileName=substr($fileName,$charPosition+1);
