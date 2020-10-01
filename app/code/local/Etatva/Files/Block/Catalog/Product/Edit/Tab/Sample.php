@@ -147,7 +147,7 @@ class Etatva_Files_Block_Catalog_Product_Edit_Tab_Sample extends Mage_Downloadab
             ->setFileParameterName('samples')
             ->setTarget(
                 Mage::getModel('adminhtml/url')
-                    ->addSessionParam()
+                    //->addSessionParam()
                     ->getUrl('*/downloadable_file/uploadfile')
             );
 
